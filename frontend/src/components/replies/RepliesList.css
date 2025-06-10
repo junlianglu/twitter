@@ -1,0 +1,17 @@
+.replieslist-root {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: none;
+  padding: 0;
+}
+
+.replieslist-empty {
+  color: #99adc6;
+  font-size: 1.03rem;
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 24px;
+  letter-spacing: 0.18px;
+}

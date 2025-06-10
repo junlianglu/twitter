@@ -1,0 +1,106 @@
+.replymodal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(30,34,38,0.57);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.replymodal-container {
+  background: #181c22;
+  width: 480px;
+  max-width: 92vw;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 30px 24px 30px;
+  color: #fff;
+  box-shadow: 0 8px 44px 0 rgba(29,161,242,0.15);
+}
+
+.replymodal-closebtn {
+  position: absolute;
+  top: 17px; left: 21px;
+  border: none;
+  background: none;
+  font-size: 23px;
+  color: #bcc8d4;
+  cursor: pointer;
+  transition: color 0.17s;
+  z-index: 1;
+}
+.replymodal-closebtn:hover {
+  color: #fff;
+  background: #232a33;
+  border-radius: 50%;
+}
+
+.replymodal-replyto {
+  color: #bfc5ce;
+  margin: 16px 0 0 0;
+  font-size: 0.98rem;
+  font-weight: 400;
+}
+
+.replymodal-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 14px 0;
+  gap: 13px;
+}
+
+.replymodal-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #2b2e35;
+  margin-top: 3px;
+}
+
+.replymodal-textarea {
+  flex: 1;
+  resize: none;
+  min-height: 56px;
+  padding: 14px 15px;
+  background: #22262b;
+  color: #e9f0f8;
+  border: 1.5px solid #283040;
+  border-radius: 10px;
+  font-size: 1.04rem;
+  outline: none;
+  transition: border 0.16s;
+}
+.replymodal-textarea:focus {
+  border-color: #1da1f2;
+}
+
+.replymodal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.replymodal-replybtn {
+  background: #1da1f2;
+  border: none;
+  color: #fff;
+  padding: 11px 28px;
+  border-radius: 22px;
+  font-size: 1.09rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 1.5px 8px rgba(29,161,242,0.11);
+  transition: background 0.17s, transform 0.12s;
+}
+.replymodal-replybtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.replymodal-replybtn:hover:not(:disabled) {
+  background: #178bd7;
+  transform: translateY(-1.5px) scale(1.04);
+}

@@ -1,0 +1,225 @@
+
+
+
+.createpost-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+  margin: auto;
+  position: relative;
+  padding: 28px 28px 24px 28px;
+}
+
+.createpost-spinner-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(245,247,250,0.91);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+.createpost-spinner {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #4262ff;
+  border-radius: 50%;
+  animation: createpost-spin 1s linear infinite;
+}
+
+@keyframes createpost-spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.createpost-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.createpost-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  background: #eee;
+}
+
+.createpost-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.createpost-textarea {
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  padding: 16px 18px;
+  min-height: 78px;
+  font-size: 1.09rem;
+  margin-bottom: 10px;
+  background: #f9f9fa;
+  transition: border 0.18s;
+  resize: vertical;
+}
+
+.createpost-buttonrow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 7px;
+}
+
+.createpost-iconbtn {
+  background: #f2f4f7;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(100,122,246,0.10);
+  transition: background 0.14s;
+  font-size: 20px;
+}
+.createpost-iconbtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.createpost-iconbtn:hover:not(:disabled) {
+  background: #e4f0fe;
+}
+
+.createpost-filepreview {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  border-radius: 7px;
+  overflow: hidden;
+  background: #f2f4f7;
+  box-shadow: 0 1.5px 6px rgba(0,0,0,0.06);
+}
+
+.createpost-removebtn {
+  position: absolute;
+  top: 4px; right: 4px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  color: #777;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.09);
+  padding: 0;
+}
+
+.createpost-submitbtn {
+  padding: 12px 0;
+  background: #4262ff;
+  color: #fff;
+  border: none;
+  border-radius: 22px;
+  font-size: 1.14rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  width: 160px;
+  align-self: flex-end;
+  box-shadow: 0 2px 8px rgba(100,122,246,0.10);
+  opacity: 1;
+  transition: background 0.15s, transform 0.11s, opacity 0.14s;
+}
+.createpost-submitbtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.createpost-error {
+  color: #d84848;
+  margin-bottom: 9px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.createpost-aimodal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.55);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createpost-aimodal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 30px 28px 30px;
+  min-width: 330px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.12);
+  position: relative;
+}
+
+.createpost-aimodal-close {
+  position: absolute;
+  top: 14px; right: 18px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #999;
+  cursor: pointer;
+}
+
+.createpost-aimodal-title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #9f69e4;
+}
+
+.createpost-aimodal-error {
+  color: #e0245e;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.createpost-aimodal-input {
+  width: 100%;
+  border: 1.5px solid #eee;
+  border-radius: 7px;
+  padding: 13px 15px;
+  font-size: 1.03rem;
+  margin-bottom: 20px;
+  background: #fafaff;
+  box-sizing: border-box;
+}
+
+.createpost-aimodal-submit {
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+  background: #9f69e4;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  font-size: 1.08rem;
+  cursor: pointer;
+  opacity: 1;
+  transition: background 0.15s;
+}
+.createpost-aimodal-submit:disabled {
+  opacity: 0.67;
+  cursor: not-allowed;
+}
