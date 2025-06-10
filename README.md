@@ -12,6 +12,20 @@ A full-featured Twitter-like platform built with React, GraphQL, Node.js, and AW
 React 18 · Apollo Client · Node.js · MongoDB · AWS · GraphQL · OpenAI API
 
 ## Setup
+
 ```bash
+git clone https://github.com/junlianglu/twitter.git
+cd twitter
+
+# 1️⃣  Backend
+cd backend
+cp .env.example .env           # add your keys
 npm install
-npm start
+npm start &                    # starts on http://localhost:4000
+cd ..
+
+# 2️⃣  Frontend
+cd frontend
+cp .env.example .env           # ensure REACT_APP_API_URL points to your backend
+npm install
+npm start                    # React server on http://localhost:3000
