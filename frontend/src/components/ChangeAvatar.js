@@ -2,7 +2,7 @@ import React, { useState, useContext, useRef } from 'react';
 import { gql, useMutation } from '@apollo/client';
 import { UserContext } from '../UserContext';
 
-const BASE_URL = process.env.REACT_APP_API_URL;
+const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000';
 
 const UPDATE_AVATAR = gql`
   mutation UpdateAvatar($avatar: String!) {

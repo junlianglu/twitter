@@ -1,3 +1,7 @@
+**/dist/
+**/build/
+**/*.zip
+
 # Ignore VS Code settings
 .vscode/
 
